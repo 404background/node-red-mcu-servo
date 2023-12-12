@@ -6,8 +6,8 @@
 			name: { value:"SG90" },
 			pin: { value:"?", validate: RED.validators.number() },
 			hz: { value:"50" },
-			pulseMin: {value:"500"},
-			pulseMax: {value:"2400"},
+			min: {value:"500"},
+			max: {value:"2400"},
 			moddable_manifest: {value: {include: "$(NODEREDMCU)/nodes/mcu/pwm/manifest.json"}},
 		},
 		inputs:1,
@@ -36,10 +36,12 @@
 	<div id="node-mcu-rows">
 	</div>
 	<div class="form-row">
-		<div class="red-ui-help">
-			See the <a class="" href="https://419.ecma-international.org/#-10-io-classes-pulse-width-modulation" target="_blank">ECMA-419 specification</a>.
-		</div>
-	</div>
+        <label for="node-input-min"><i class="fa fa-arrows-h"></i> pulse width</label>
+        <span for="node-input-min">min</span>
+        <input type="text" id="node-input-min" style="width:60px">
+        <span for="not-input-max" style="margin-left:22px;">max</span>
+        <input type="text" id="node-input-max" style="width:60px">
+    </div>
 </script>
 
 <script type="text/javascript" src="resources/@moddable-node-red/mcu/library.js"></script>
