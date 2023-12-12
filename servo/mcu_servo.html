@@ -3,9 +3,11 @@
 		category: mcuHelper.category,
 		color: mcuHelper.color,
 		defaults: {
-			name: { value:"" },
+			name: { value:"SG90" },
 			pin: { value:"?", validate: RED.validators.number() },
-			hz: { value:"" },
+			hz: { value:"50" },
+			pulseMin: {value:"500"},
+			pulseMax: {value:"2400"},
 			moddable_manifest: {value: {include: "$(NODEREDMCU)/nodes/mcu/pwm/manifest.json"}},
 		},
 		inputs:1,
