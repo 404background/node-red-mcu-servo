@@ -12,7 +12,7 @@
 		},
 		inputs:1,
 		outputs:0,
-		icon: "mcu.png",
+		icon: "serial.svg",
 		paletteLabel: 'Servo',
 		label: function() {
 			return this.name || "Servo " + this.pin;
@@ -44,7 +44,7 @@
     </div>
 </script>
 
-<script type="text/javascript" src="resources/@moddable-node-red/mcu/library.js"></script>
+<script type="text/javascript" src="$(NODEREDMCU)/nodes/mcu/resources/library.js"></script>
 
 <script type="text/markdown" data-help-name="mcu_servo">
 MCU node to set an [ECMA-419 PWM Output](https://419.ecma-international.org/#-10-io-classes-pulse-width-modulation).
