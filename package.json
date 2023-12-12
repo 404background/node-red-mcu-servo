@@ -1,0 +1,12 @@
+{
+	"name": "mcu_servo",
+	"version": "1.0.0",
+	"description": "example",
+	"license": "UNLICENSED",
+	"node-red" : {
+		"nodes": {
+			"mcu_servo": "mcu_servo.js"
+		}
+	}
+}
+ 

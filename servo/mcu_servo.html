@@ -1,0 +1,53 @@
+<script type="text/javascript">
+	RED.nodes.registerType('mcu_servo',{
+		category: mcuHelper.category,
+		color: mcuHelper.color,
+		defaults: {
+			name: { value:"" },
+			pin: { value:"?", validate: RED.validators.number() },
+			hz: { value:"" },
+			moddable_manifest: {value: {include: "$(NODEREDMCU)/nodes/mcu/pwm/manifest.json"}},
+		},
+		inputs:1,
+		outputs:0,
+		icon: "mcu.png",
+		paletteLabel: 'Servo',
+		label: function() {
+			return this.name || "Servo " + this.pin;
+		},
+		oneditprepare: function() {
+			const div = $("#node-mcu-rows");
+			mcuHelper.appendProperties.PWM(div, "io", {});
+			mcuHelper.restoreProperties.PWM(this, "io");
+		},
+		oneditsave: function() {
+			mcuHelper.saveProperties.PWM(this, "io");
+		},
+	});
+</script>
+
+<script type="text/html" data-template-name="mcu_servo">
+	<div class="form-row">
+		<label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Servo">
+	</div>
+	<div id="node-mcu-rows">
+	</div>
+	<div class="form-row">
+		<div class="red-ui-help">
+			See the <a class="" href="https://419.ecma-international.org/#-10-io-classes-pulse-width-modulation" target="_blank">ECMA-419 specification</a>.
+		</div>
+	</div>
+</script>
+
+<script type="text/javascript" src="resources/@moddable-node-red/mcu/library.js"></script>
+
+<script type="text/markdown" data-help-name="mcu_servo">
+MCU node to set an [ECMA-419 PWM Output](https://419.ecma-international.org/#-10-io-classes-pulse-width-modulation).
+
+### Inputs
+: payload (number) : value from 0.0 to 1.0
+
+### Details
+The `payload` value is multiplied by the PWM's `resolution` to calculate the output value. 
+</script>
