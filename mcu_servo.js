@@ -9,9 +9,13 @@ module.exports = function(RED) {
         let AngleMax = Number(config.angleMax);
         node.on('input', function(msg) {
             let cycle = 1 / Hz;
-            let PulseWidth = PulseMax-PulseMin;
-            let AngleWidth = AngleMax-AngleMin;
+            console.log(cycle);
+            let PulseWidth = PulseMax - PulseMin;
+            console.log(PulseWidth);
+            let AngleWidth = AngleMax - AngleMin;
+            console.log(AngleWidth);
             msg.payload = Number(msg.payload) / AngleWidth * PulseWidth / cycle;
+            console.log(msg.payload);
             node.send(msg);
         });
     }
