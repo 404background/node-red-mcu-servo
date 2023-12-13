@@ -1,29 +1,23 @@
 <script type="text/javascript">
 	RED.nodes.registerType('mcu_servo',{
-		category: mcuHelper.category,
-		color: mcuHelper.color,
+		category: 'MCU',
+		color: '#a2aaff',
 		defaults: {
 			name: { value:"SG90" },
 			pin: { value:"?", validate: RED.validators.number() },
 			hz: { value:"50" },
-			min: {value:"500"},
-			max: {value:"2400"},
+			pulseMin: {value:"500"},
+			pulseMax: {value:"2400"},
+			angleMin: {value:"0"},
+			angleMax: {value:"180"},
 			moddable_manifest: {value: {include: "./manifest.json"}},
 		},
 		inputs:1,
-		outputs:0,
-		icon: "mcu.png",
+		outputs:1,
+		icon: "serial.svg",
 		paletteLabel: 'Servo',
 		label: function() {
-			return this.name || "Servo " + this.pin;
-		},
-		oneditprepare: function() {
-			const div = $("#node-mcu-rows");
-			mcuHelper.appendProperties.PWM(div, "io", {});
-			mcuHelper.restoreProperties.PWM(this, "io");
-		},
-		oneditsave: function() {
-			mcuHelper.saveProperties.PWM(this, "io");
+			return this.name || "Servo";
 		},
 	});
 </script>
@@ -38,20 +32,19 @@
 	<div class="form-row">
         <label for="node-input-min"><i class="fa fa-arrows-h"></i> pulse width</label>
         <span for="node-input-min">min</span>
+        <input type="text" id="node-input-pulseMin" style="width:60px">
+        <span for="not-input-max" style="margin-left:22px;">max</span>
+        <input type="text" id="node-input-pulseMax" style="width:60px">
+    </div>
+	<div class="form-row">
+        <label for="node-input-min"><i class="fa fa-arrows-h"></i> angle</label>
+        <span for="node-input-angleMin">min</span>
         <input type="text" id="node-input-min" style="width:60px">
         <span for="not-input-max" style="margin-left:22px;">max</span>
-        <input type="text" id="node-input-max" style="width:60px">
+        <input type="text" id="node-input-angleMax" style="width:60px">
     </div>
 </script>
 
-<script type="text/javascript" src="resources/@moddable-node-red/mcu/library.js"></script>
-
 <script type="text/markdown" data-help-name="mcu_servo">
-MCU node to set an [ECMA-419 PWM Output](https://419.ecma-international.org/#-10-io-classes-pulse-width-modulation).
 
-### Inputs
-: payload (number) : value from 0.0 to 1.0
-
-### Details
-The `payload` value is multiplied by the PWM's `resolution` to calculate the output value. 
 </script>
