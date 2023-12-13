@@ -1,0 +1,52 @@
+<script type="text/javascript">
+	RED.nodes.registerType('mcu_servo',{
+		category: 'MCU',
+		color: '#a2aaff',
+		defaults: {
+			name: { value:"SG90" },
+			hz: { value:"50" },
+			pulseMin: {value:"0.5"},
+			pulseMax: {value:"2.4"},
+			angleMin: {value:"0"},
+			angleMax: {value:"180"},
+		},
+		inputs:1,
+		outputs:1,
+		icon: "serial.svg",
+		align: "right",
+		label: function() {
+			return this.name || "Servo";
+		},
+	});
+</script>
+
+<script type="text/html" data-template-name="mcu_servo">
+	<div class="form-row">
+		<label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Servo">
+	</div>
+	<div id="node-mcu-hz">
+		<div class="form-row">
+			<label for="node-input-hz"><i class="fa fa-tag"></i> Frequency(Hz)</label>
+			<input type="text" id="node-input-hz" style="width:60px">
+		</div>
+	</div>
+	<div class="form-row">
+        <label for="node-input-pulse"><i class="fa fa-arrows-h"></i> pulse width(ms)</label>
+        <span for="node-input-min">min</span>
+        <input type="text" id="node-input-pulseMin" style="width:60px">
+        <span for="node-input-pulseMax" style="margin-left:22px;">max</span>
+        <input type="text" id="node-input-pulseMax" style="width:60px">
+    </div>
+	<div class="form-row">
+        <label for="node-input-angle"><i class="fa fa-arrows-h"></i> angle</label>
+        <span for="node-input-angleMin">min</span>
+        <input type="text" id="node-input-angleMin" style="width:60px">
+        <span for="node-input-angleMax" style="margin-left:22px;">max</span>
+        <input type="text" id="node-input-angleMax" style="width:60px">
+    </div>
+</script>
+
+<script type="text/markdown" data-help-name="mcu_servo">
+
+</script>

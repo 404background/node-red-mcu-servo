@@ -1,0 +1,10 @@
+{
+	"modules": {
+		"*": [
+			"./mcu_servo"
+		]
+	},
+	"preload": [
+		"mcu_servo"
+	]
+}
