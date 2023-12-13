@@ -5,7 +5,7 @@
 	"license": "UNLICENSED",
 	"node-red" : {
 		"nodes": {
-			"mcu_servo": "servo/mcu_servo.js"
+			"mcu_servo": "mcu_servo.js"
 		}
 	}
 }
