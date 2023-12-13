@@ -14,7 +14,7 @@ module.exports = function(RED) {
             console.log(PulseWidth);
             let AngleWidth = AngleMax - AngleMin;
             console.log(AngleWidth);
-            msg.payload = Number(msg.payload) / AngleWidth * PulseWidth / cycle;
+            msg.payload = (Number(msg.payload) / AngleWidth * PulseWidth + PulseMin) / cycle;
             console.log(msg.payload);
             node.send(msg);
         });
