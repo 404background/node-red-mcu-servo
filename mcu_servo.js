@@ -7,11 +7,11 @@ module.exports = function(RED) {
         let PulseMax = Number(config.pulseMax);
         let AngleMin = Number(config.angleMin);
         let AngleMax = Number(config.angleMax);
-        let cycle = 1 / Hz;
-        let PulseWidth = PulseMax-PulseMin;
-        let AngleWidth = AngleMax-AngleMin;
         node.on('input', function(msg) {
-            msg.payload = msg.payload / AngleWidth * PulseWidth / cycle;
+            let cycle = 1 / Hz;
+            let PulseWidth = PulseMax-PulseMin;
+            let AngleWidth = AngleMax-AngleMin;
+            msg.payload = Number(msg.payload) / AngleWidth * PulseWidth / cycle;
             node.send(msg);
         });
     }
