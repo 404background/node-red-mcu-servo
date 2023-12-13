@@ -6,8 +6,8 @@
 			name: { value:"SG90" },
 			pin: { value:"?", validate: RED.validators.number() },
 			hz: { value:"50" },
-			pulseMin: {value:"500"},
-			pulseMax: {value:"2400"},
+			pulseMin: {value:"0.5"},
+			pulseMax: {value:"2.4"},
 			angleMin: {value:"0"},
 			angleMax: {value:"180"},
 		},
@@ -31,8 +31,10 @@
         <label for="node-input-min"><i class="fa fa-arrows-h"></i> pulse width</label>
         <span for="node-input-min">min</span>
         <input type="text" id="node-input-pulseMin" style="width:60px">
+		<span>ms</span>
         <span for="not-input-max" style="margin-left:22px;">max</span>
         <input type="text" id="node-input-pulseMax" style="width:60px">
+		<span>ms</span>
     </div>
 	<div class="form-row">
         <label for="node-input-min"><i class="fa fa-arrows-h"></i> angle</label>
