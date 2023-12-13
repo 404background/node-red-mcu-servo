@@ -8,7 +8,7 @@ module.exports = function(RED) {
         let AngleMin = Number(config.angleMin);
         let AngleMax = Number(config.angleMax);
         node.on('input', function(msg) {
-            let cycle = 1 / Hz;
+            let cycle = 1 / Hz * 1000;
             console.log(cycle);
             let PulseWidth = PulseMax - PulseMin;
             console.log(PulseWidth);
