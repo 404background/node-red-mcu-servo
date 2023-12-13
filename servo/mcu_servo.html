@@ -8,7 +8,7 @@
 			hz: { value:"50" },
 			min: {value:"500"},
 			max: {value:"2400"},
-			moddable_manifest: {value: {include: "$(NODEREDMCU)/nodes/mcu/pwm/manifest.json"}},
+			moddable_manifest: {value: {include: "./manifest.json"}},
 		},
 		inputs:1,
 		outputs:0,
@@ -44,7 +44,7 @@
     </div>
 </script>
 
-<script type="text/javascript" src="$(NODEREDMCU)/nodes/mcu/resources/library.js"></script>
+<script type="text/javascript" src="$(NODEREDMCU)/nodes/mcu/resources/@moddable-node-red/mcu/library.js"></script>
 
 <script type="text/markdown" data-help-name="mcu_servo">
 MCU node to set an [ECMA-419 PWM Output](https://419.ecma-international.org/#-10-io-classes-pulse-width-modulation).
