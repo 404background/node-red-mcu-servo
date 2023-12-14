@@ -29,16 +29,16 @@ $ sudo systemctl restart nodered.service
 
 ## Test Case
 角度を受け取って、計算してからPWM outノードに渡すようにしています。  
-![](img\sample_flow.png)  
+![](https://github.com/404background/node-red-mcu-servo/blob/main/img/sample_flow.png?raw=true)  
 
 パルス幅、周期、角度の初期値はSG90に合わせています。  
-![](img\sample_flow_servo.png)  
+![](https://github.com/404background/node-red-mcu-servo/blob/main/img/sample_flow_servo.png?raw=true)  
 
 PWM outノードの周波数も設定してください。  
-![](img\sample_flow_pwm.png)
+![](https://github.com/404background/node-red-mcu-servo/blob/main/img/sample_flow_pwm.png?raw=true)
 
 スライダーは0~180に設定しています。  
-![](img\sample_flow_slider.png)
+![](https://github.com/404background/node-red-mcu-servo/blob/main/img/sample_flow_slider.png?raw=true)
 
 スライダーに合わせて、サーボモーターが回転します。  
 [![](https://i9.ytimg.com/vi_webp/tQKZNu7PTCM/mq1.webp?sqp=CKTK6asG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSigsMA8=&rs=AOn4CLA09JDnoAa3sZu71X8eRK39LnMO3A)](https://youtu.be/tQKZNu7PTCM)
