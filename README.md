@@ -61,6 +61,6 @@ Moddable SDK：
 Node-RED「はじめてのノード開発」：
 <https://nodered.jp/docs/creating-nodes/first-node>  
 Qiitaに書いた記事：
-<https://qiita.com/background/items/9b820251aa9dda5a3167>
-ホームページに書いた記事：
-<https://404background.com/program/node-create-2>
+<https://qiita.com/background/items/9b820251aa9dda5a3167>  
+ホームページに書いた記事：  
+<https://404background.com/program/node-create-2>  
