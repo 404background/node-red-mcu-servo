@@ -15,5 +15,5 @@ module.exports = function(RED) {
             node.send(msg);
         });
     }
-    RED.nodes.registerType("mcu_servo", ServoNode);
+    RED.nodes.registerType("servo", ServoNode);
 }

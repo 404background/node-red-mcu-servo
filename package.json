@@ -2,7 +2,7 @@
   "name": "@background404/node-red-contrib-mcu-servo",
   "version": "0.0.1",
   "description": "Node for Servomotor with Node-RED MCU",
-  "main": "mcu_servo.js",
+  "main": "servo.js",
   "scripts": {
     "test": "mocha test/**/*_spec.js"
   },
@@ -12,7 +12,7 @@
   "node-red": {
     "version": ">=1.3.7",
     "nodes": {
-      "servo": "mcu_servo.js"
+      "servo": "servo.js"
     }
   },
   "repository": {
