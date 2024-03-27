@@ -32,6 +32,7 @@ $ sudo nano node_types.json
 ```
 
 を追加します。  
+※HTMLにmoddable_manifestを加えたことにより、この手順は不要かもしれません。  
 4. Node-REDを再起動します。  
 
 ```
